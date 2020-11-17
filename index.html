@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Un générateur de citations</title>
+    <!--Utilisation du framework w3-css-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div id="wrapper" class="w3-auto">
+        <div class="w3-container">
+            <!--En tête-->
+            <header class="w3-center">
+                <h1 id="titre" class="w3-padding-24 w3-xxxlarge">Le générateur de citations <strong>(imaginaires)</strong> de la série Kaamelott</h1>
+                <div class="w3-padding-16">
+                    <img id="logo" src="img/kaamelott.png" alt="logo Kaamelott">
+                </div>
+                <img id="personnages" src="img/personnages-kaamelott.jpg" alt="personnages série kaamelott" style="width: 75%;">
+            </header>
+            <main class="w3-container">
+                <!--Changement pour le générateur Friends-->
+                <div id= "changement-friends" class="w3-center">
+                    <p class="w3-large">Vous n'aimez pas la série Kaamelott ?</p>
+                    <p class="w3-large">Vous préférez générer des citations <strong>(imaginaires)</strong> de la série Friends ?</p>
+                    <div class="w3-col s12">
+                        <img src="img/friends-logo.png" alt="logo friends">
+                    </div>
+                    <button id="change-for-friends" onclick="affichageFriends()" class="w3-button w3-margin w3-xlarge w3-black">Changer pour Friends ! Cliquez ici !</button>
+                    <div class="w3-border-top w3-border-black">
+                        <p class="w3-large">Si vous souhaitez bien voir des citations de la série Kaamelott, continuez ci-dessous !</p>
+                    </div>
+                </div>
+               <div>
+                   <!--Boutons radio du choix de nombre de citations-->
+                    <div id="choix-nombre" class="w3-center w3-large">
+                        <p>Combien de citations souhaitez-vous générer ?</p>
+                        <input class="w3-radio" type="radio" name="nombre-citation" value="nombreCitation1" id="nombre-citation1" checked ><label for="nombre-citation1">Une</label>
+                        <input class="w3-radio" type="radio" name="nombre-citation" value="nombreCitation2" id="nombre-citation2" ><label for="nombre-citation2">Deux</label>
+                        <input class="w3-radio" type="radio" name="nombre-citation" value="nombreCitation3" id="nombre-citation3" ><label for="nombre-citation3">Trois</label>
+                        <input class="w3-radio" type="radio" name="nombre-citation" value="nombreCitation4" id="nombre-citation4" ><label for="nombre-citation4">Quatre</label>
+                        <input class="w3-radio" type="radio" name="nombre-citation" value="nombreCitation5" id="nombre-citation5" ><label for="nombre-citation5">Cinq</label>
+                    </div>
+                    <!--Bouton de génération des citations-->
+                   <p class="w3-center w3-large">Appuyer sur le bouton pour générer votre(vos) citation(s) </p>
+                   <div class="w3-container w3-center">
+                    <button id="generate-citation" onclick="createCitation()" class="w3-button w3-xlarge w3-black">Générer</button>
+                    </div>
+               </div>
+               <!--Réceptacle des citations générées-->
+               <div id="quote">
+
+                </div>
+                <!--Boutons pour "recommencer au début" et "fin de programme" (cacher par défaut tant que pas de citations générées)-->
+               <div id="boutons-end" class="w3-container w3-center w3-padding-32">
+                    <div class="w3-container w3-col s6">
+                        <button id="rechargement-page" onclick="reloadPage()" class="w3-button w3-xlarge w3-black">Cliquez ici pour<br>recommencer<br>au début</button>
+                    </div>
+                    <div class="w3-container w3-col s6">
+                        <button id="quitter-page" onclick="quitPage()" class="w3-button w3-xlarge w3-black">Cliquez ici pour<br>quitter le<br>programme</button>
+                    </div>
+               </div> 
+            </main>
+        </div>
+        <footer id="main-footer" class="w3-container w3-black ">
+            <div class="w3-stretch w3-center">
+                <p class="w3-small">Copyright 2020 - <a href="mentions-legales.html">Mentions légales</a> - Site réalisé par
+                    <a href="http://www.nicolas-coureau.fr/">Nicolas Coureau</a></p>
+                <p class="w3-small w3-hide-small">Projet 5 - Parcours Développeur d'application - Frontend - <a
+                        href="https://openclassrooms.com/fr/paths/60-developpeur-dapplication-frontend">OPENCLASSROOMS</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
